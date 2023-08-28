@@ -84,7 +84,6 @@ def create_app():
         authors_dicts = []
         for author in authors:
             ratings = list(chain(*list(map(lambda x: x.ratings, author.books))))
-            print(ratings)
             authors_dicts.append({
                 'item': author,
                 'average_score': 0 if len(ratings) == 0 else sum(map(lambda x: x.score, ratings)) / len(ratings)

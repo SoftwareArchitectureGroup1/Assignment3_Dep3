@@ -71,7 +71,7 @@ def create_app():
             except Exception as e:
                 print("An error occurred during data population:", e)
     
-    populate_database()
+    #populate_database()
 
     # a simple page that says hello
     @app.route('/')
